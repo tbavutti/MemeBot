@@ -1,6 +1,6 @@
 MemeBot es un bot de Discord que responde con memes de reddit. Por el momento se corre de forma local.  
 
-#Pasos a seguir:
+Pasos a seguir:
 
   - Entrar al link: https://discord.com/developers/applications
   - Crear su aplicacion, en este caso el bot con la opcion de nueva aplicacion(New Application)
@@ -25,13 +25,15 @@ De forma muy resumida, nuestro aplicacion es un modelo cliente-servidor donde nu
 
 Link a la API de memes: https://github.com/D3vd/Meme_Api
     
-#Como usarla:
+Como usarla:
 
   -Abrir cmd
+  
   -con el comando cd ir a la ubicacion donde esta nuestro proyecto -> ej: cd path/proyecto
+  
   -correr el .py -> ej: python archivo.py 
+  
   -Como corre de forma local, si se corta el programa va a dejar de funcionar
 
-  -
 
 
