@@ -25,7 +25,7 @@ De forma muy resumida, nuestro aplicacion es un modelo cliente-servidor donde nu
 
 Link a la API de memes: https://github.com/D3vd/Meme_Api
     
-Como usarla:
+Como usarlo:
 
   - Abrir cmd
   
