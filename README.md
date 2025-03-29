@@ -1,1 +1,1 @@
-MemeBot es un bot de Discord diseñado para enriquecer la experiencia de los usuarios mediante la integración de memes populares provenientes de Reddit. Este bot proporciona una forma sencilla y efectiva de acceder a contenido humorístico actualizado, facilitando la interacción y el entretenimiento dentro de los servidores.
+MemeBot es un bot de Discord que mejora la experiencia de los usuarios al integrar memes populares directamente desde Reddit. Con él, acceder a contenido humorístico actualizado es fácil y rápido.
