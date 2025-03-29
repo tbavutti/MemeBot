@@ -27,13 +27,13 @@ Link a la API de memes: https://github.com/D3vd/Meme_Api
     
 Como usarla:
 
-  -Abrir cmd
+  - Abrir cmd
   
-  -con el comando cd ir a la ubicacion donde esta nuestro proyecto -> ej: cd path/proyecto
+  - Con el comando cd ir a la ubicacion donde esta nuestro proyecto -> ej: cd path/proyecto
   
-  -correr el .py -> ej: python archivo.py 
+  - Correr el .py -> ej: python archivo.py 
   
-  -Como corre de forma local, si se corta el programa va a dejar de funcionar
+  - Como corre de forma local, si se corta el programa va a dejar de funcionar
 
 
 
