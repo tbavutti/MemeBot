@@ -29,7 +29,7 @@ Pasos a seguir:
         -discord -> Instalar por cmd: pip install discord.py
         -requests -> Instalar por cmd: pip install requests
     
-#Como funciona: 
+Como funciona: 
 
 De forma muy resumida, nuestro aplicacion es un modelo cliente-servidor donde nuestro bot(Cliente) se conecta a Discord(Servidor) mediante la API de Discord. Se usa una programacion orientada a objetos, donde nuestra clase hereda de la clase Client de la biblioteca discord que descargamos. En esta clase heredada, se va a crear la logica para mandar un meme random de reddit, lo cual vamos a usar otra API para recibirlos. 
 
