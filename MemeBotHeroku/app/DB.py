@@ -4,7 +4,7 @@ import sqlite3
 
 class ConnectionDB():
     def __init__(self):
-        self.db = r"C:\Almacenamiento\Proyectos\MemeBotInfo\baseMemeBot.db"
+        self.db = r"path a la db"
         
        
     def create_connection(self):
