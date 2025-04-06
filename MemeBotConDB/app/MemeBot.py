@@ -1,6 +1,8 @@
 import discord
 import requests
+import DB as database
 
+db = database.DB()
 
 def get_meme():
     try:
@@ -12,12 +14,18 @@ def get_meme():
         return None
 
 class MyClient(discord.Client):
+    def __init__(self, intents):
+        super().__init__(intents=intents)
+        self.nombre_canal = 'nombre de tu canal' #Reemplaza con el nombre del canal cargado en la DB
+        self.id_servidor = 'id del servidor en el que esta el canal' #Reemplaza con el id del servidor cargado en la DB
+    
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
-        channel_id = 1324325817262867287  # Reemplaza con el ID de tu canal
-        channel = self.get_channel(channel_id)
+        channel_id = db.get_id_canal_servidor(self.nombre_canal, self.id_servidor)  
+        channel = self.get_channel(int(channel_id))
         if channel:
             await channel.send('¡MemeBot está en línea!')
+        
 
     async def on_message(self, message):
         if message.author == self.user:
@@ -29,8 +37,10 @@ class MyClient(discord.Client):
             else:
                 await message.channel.send("No se pudo obtener un meme en este momento.")
 
+token = db.get_token('Nombre del bot') #Reemplaza con el nombre del Bot cargado en la DB
+
 intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('Token') #Reemplaza con el token guardado
+client.run(token) 

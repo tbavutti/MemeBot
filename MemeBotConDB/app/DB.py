@@ -4,7 +4,7 @@ import sqlite3
 
 class ConnectionDB():
     def __init__(self):
-        self.db = r"path a la db"
+        self.db = r"path a tu db" #Si no existe crea la db en el path que se le pase
         
        
     def create_connection(self):
@@ -80,6 +80,15 @@ class DB():
         self.create_table(token)
         
 
+    def create_tables(self):
+        try:
+            self.create_table_servidor()
+            self.create_table_canal_servidor()
+            self.create_table_token()
+        except sqlite3.Error as e:
+            print(e)
+        
+    
     def load_servidor(self, id_servidor, nombre_servidor):
         try:
             self.cur.execute('''
@@ -113,6 +122,28 @@ class DB():
             self.cur.execute('''
                     SELECT id FROM Servidor WHERE id = ?
             ''', (id_servidor,))
+            row = self.cur.fetchone()
+            id = row[0]
+            return id
+        except sqlite3.Error as e:
+            print(e)
+            
+    def get_id_canal_servidor(self, nombre_canal, id_servidor):
+        try:
+            self.cur.execute('''
+                    SELECT id FROM Canal_Servidor WHERE nombre = ? AND id_servidor = ?
+            ''', (nombre_canal, id_servidor))
+            row = self.cur.fetchone()
+            id = row[0]
+            return id
+        except sqlite3.Error as e:
+            print(e)
+            
+    def get_token(self, nombre_bot):
+        try:
+            self.cur.execute('''
+                    SELECT id FROM Token WHERE nombre_bot = ?
+            ''', (nombre_bot, ))
             row = self.cur.fetchone()
             id = row[0]
             return id
